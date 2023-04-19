@@ -4,8 +4,18 @@ import styles from "./styles"
 
 export function Procedure() {
     return (
-        <Text>
-            Procedimento
-        </Text>
+        <View>
+            <View>
+                <Text>Procedimentos</Text>
+            </View>
+            <View>
+                <Text>Seus Procedimentos serão exibidos aqui, com o nome do exame e a data do exame, onde deverá ser marcado a caixinha quando concluir.</Text>
+            </View>
+            <View>
+                <View>
+                    <Text>Exames</Text>
+                </View>
+            </View>
+        </View>
     );
 }

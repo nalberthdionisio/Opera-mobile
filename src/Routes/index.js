@@ -7,6 +7,7 @@ import { Ionicons } from "@expo/vector-icons";
 import { Login } from '../screens/Login'
 import { Home } from '../screens/Home'
 import { Procedure } from '../screens/Procedure'
+import { Notification } from '../screens/Notification'
 import { Profile } from '../screens/Profile'
 
 const Stack = createNativeStackNavigator();
@@ -75,6 +76,17 @@ export default function Routes() {
                                         return <Ionicons name="person" size={size} color={color} />
                                     }
                                     return <Ionicons name="person-outline" size={size} color={color} />
+                                }
+                            }}
+                        />
+                        <Tab.Screen name="Notificação" component={Notification} 
+                            options={{
+                                headerShown: false,
+                                tabBarIcon: ({color, size, focused}) => {
+                                    if(focused){
+                                        <Ionicons name="md-notifications-sharp" size={size} color={color}/>
+                                    }
+                                    return <Ionicons name="md-notifications-outline" size={size} color={color}/>
                                 }
                             }}
                         />
