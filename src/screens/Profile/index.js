@@ -1,0 +1,11 @@
+import React from "react";
+import { View, Text, TextInput, ImageBackground, Image, TouchableOpacity, SafeAreaView, StatusBar } from "react-native"
+import styles from "./styles"
+
+export function Profile() {
+    return (
+        <Text>
+            perfil
+        </Text>
+    );
+}
