@@ -1,22 +1,20 @@
 import React from "react";
-import { View, Text, TextInput, ImageBackground, Image, TouchableOpacity, SafeAreaView, StatusBar } from "react-native"
+import { View, Text } from "react-native"
 import styles from "./styles"
 
 export function Profile() {
     return (
         <View>
             <View>
-                <Text>foto do usuario</Text>
-                <Text>nome do usuario</Text>
+                <Text>foto</Text>
+                <Text style={styles.nomeUser}>nome do usuario</Text>
             </View>
             <View>
-                <Text>data de nascimento</Text>
-                <Text>cidade natal</Text>
+                <Text style={styles.date}>D.N: 12/11/1990</Text>
+                <Text style={styles.city}>Cidade: Juazeiro do Norte</Text>
             </View>
-            <View>
-                <Text>calculadora de IMC</Text>
-            </View>
-            <View>
+            <View style={styles.imcCard}>
+                <Text style={styles.imc}>calculadora de IMC</Text>
                 <Text>historico de IMC</Text>
                 <Text>imagem</Text>
             </View>
