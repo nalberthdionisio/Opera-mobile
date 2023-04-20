@@ -9,7 +9,7 @@ export function Welcome() {
     useEffect(() => {
         const timer = setTimeout(() => {
           navigateToLogin();
-        }, 5000);
+        }, 3000);
     
         return () => clearTimeout(timer);
       }, []);

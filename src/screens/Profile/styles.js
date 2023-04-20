@@ -22,8 +22,18 @@ const styles = StyleSheet.create({
         fontSize: 20,
         color: 'black',
     },
+    backgroundIcon:{
+        borderRadius: 100,
+        backgroundColor: '#2B4061',
+        width: 60,
+        height: 60,
+        justifyContent:'center',
+        alignItems:'center',
+        right:140,
+        bottom: 10,
+    },
     imcCard:{
-        backgroundColor: 'green',
+        backgroundColor: '#DADADA',
         borderRadius: 10,
         justifyContent: 'center',
         alignItems: 'center',
@@ -31,12 +41,27 @@ const styles = StyleSheet.create({
         marginLeft: 40,
         marginTop: 40
     },
-    imc:{
-        marginTop: 50,
+    imc:{ 
+        bottom: 40,
+        width: '60%',
+    },
+    imcTitle:{
         color: '#2B4061',
+        marginBottom: 20,
         fontWeight:"bold",
         fontSize: 20,
-    },  
+    }, 
+    imcHistorico:{
+        justifyContent:'center',
+        alignItems: 'center',
+        marginTop: 20,
+    },
+    imcHistoricoTitle:{
+        color: '#2B4061',
+        fontSize: 25,
+        marginBottom: 40,
+    }
+
 })
 
 export default styles

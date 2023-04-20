@@ -16,7 +16,7 @@ export function Login() {
             <View style={styles.content}>
                 <Image
                     style={styles.logo}
-                    source={require("../../assets/images/Rectangle.png")}
+                    source={require("../../assets/images/icon.png")}
                 />
                 <Text style={styles.titleLogin}>Entre</Text>
                 <View >
