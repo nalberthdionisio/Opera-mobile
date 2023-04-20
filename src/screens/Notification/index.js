@@ -8,7 +8,7 @@ export function Notification() {
     const navigation = useNavigation();
     return (
         <View>
-            <Text></Text>
+            <Text>Notificação </Text>
         </View>
     );
 }

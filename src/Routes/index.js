@@ -4,6 +4,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 
 import { Ionicons } from "@expo/vector-icons";
 
+import { Welcome } from '../screens/Welcome'
 import { Login } from '../screens/Login'
 import { Home } from '../screens/Home'
 import { Procedure } from '../screens/Procedure'
@@ -17,11 +18,11 @@ export default function Routes() {
 
     return (
         <Stack.Navigator
-            initialRouteName="Login"
+            initialRouteName="Welcome"
             screenOptions={{
                 headerShown: false,
-            }}
-        >
+            }}>
+            <Stack.Screen name="Welcome" component={Welcome} />
             <Stack.Screen name="Login" component={Login} />
             <Stack.Screen name="Home">
                 {() => (
