@@ -2,8 +2,27 @@
 import {StyleSheet} from "react-native";
 
 const styles = StyleSheet.create({
+    container:{
+        bottom: 120,
+    },
+    imageProfile:{
+        borderRadius: 100,
+        width: 120,
+        height: 120,
+        top:200,
+        left:25,
+    },
+    editImage:{
+        backgroundColor: '#DADADA',
+        justifyContent: 'center',
+        alignItems: 'center',
+        borderRadius: 50,
+        width: 50,
+        height: 50,
+        top: 170,
+        left: 100,
+    },
     nomeUser: {
-        backgroundColor: 'red',
         marginTop: 230,
         paddingLeft: 40,
         fontSize: 30,
@@ -11,13 +30,11 @@ const styles = StyleSheet.create({
         fontWeight:"bold"
     },
     date:{
-        backgroundColor: 'blue',
         paddingLeft: 40,
         fontSize: 20,
         color: 'black',
     },
     city:{
-        backgroundColor: 'yellow',
         paddingLeft: 40,
         fontSize: 20,
         color: 'black',
@@ -34,12 +51,12 @@ const styles = StyleSheet.create({
     },
     imcCard:{
         backgroundColor: '#DADADA',
-        borderRadius: 10,
-        justifyContent: 'center',
+        borderRadius: 30,
         alignItems: 'center',
         width: '80%',
         marginLeft: 40,
-        marginTop: 40
+        marginTop: 40,
+        elevation: 20
     },
     imc:{ 
         bottom: 40,
@@ -50,16 +67,26 @@ const styles = StyleSheet.create({
         marginBottom: 20,
         fontWeight:"bold",
         fontSize: 20,
-    }, 
+    },
+    imcText:{
+        fontSize: 16,
+        fontWeight: 'bold'
+    },
     imcHistorico:{
         justifyContent:'center',
         alignItems: 'center',
-        marginTop: 20,
+        marginTop: 40,
     },
     imcHistoricoTitle:{
         color: '#2B4061',
         fontSize: 25,
         marginBottom: 40,
+        fontWeight: 'bold'
+    },
+    imcHistoricoDescription:{
+        marginTop: 20,
+        color: '#2B4061',
+        fontSize: 16
     }
 
 })
