@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, TextInput, ImageBackground, Image, TouchableOpacity, SafeAreaView, StatusBar } from "react-native"
+import { View, Text, TextInput, ImageBackground, Image, TouchableOpacity } from "react-native"
 import { useNavigation } from '@react-navigation/native';
 import styles from "./styles"
 

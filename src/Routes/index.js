@@ -85,7 +85,7 @@ export default function Routes() {
                                 headerShown: false,
                                 tabBarIcon: ({color, size, focused}) => {
                                     if(focused){
-                                        <Ionicons name="md-notifications-sharp" size={size} color={color}/>
+                                        <Ionicons name="ios-notifications-sharp" size={size} color={color}/>
                                     }
                                     return <Ionicons name="md-notifications-outline" size={size} color={color}/>
                                 }

@@ -17,7 +17,7 @@ export function Profile() {
                 </View>
             </View>
             <View>
-                <Text style={styles.nomeUser}>Nalberth</Text>
+                <Text style={styles.nomeUser}>Ana Luiza</Text>
             </View>
             <View>
                 <Text style={styles.date}>D.N: 12/11/1990</Text>
