@@ -1,14 +1,33 @@
-import React from "react"
-import { View, Text, } from "react-native"
-import  CheckBox  from "../../components/CheckBox"
+import { useEffect, useState } from "react"
+import { View, Text,FlatList } from "react-native"
 
+import {api} from '../../Services/api'
+import { CheckBox } from '../../components/CheckBox'
 
 
 import styles from "./styles"
 
-export function Procedure() {
-    const optionsProc = [
-        {text: 'exame 1', id: 1}]
+
+    
+    
+    export function Procedure() {
+    const [data, setData] = useState([])
+    const [checked, setChecked] = useState(false)
+        
+
+    async function fetchApi() {
+        const { data } = await api.get('/posts', {
+            params: {
+                _limit: 5
+            }
+        })
+        setData(data)
+    }
+
+    useEffect(() => {
+        fetchApi()
+    }, [])
+
 
     return (
         <View>
@@ -29,17 +48,23 @@ export function Procedure() {
             >
                 <View>
                     <Text
-                    style={styles.titleCard}
-                    >
-                        Entregas para esta semana 
-                    </Text>
+                    style={styles.titleCard}>Entregas para esta semana </Text>
                     <View>
-                        <CheckBox options={optionsProc} onChange={(op)=> alert(op)} />
-                        <CheckBox options={optionsProc} onChange={(op)=> alert(op)} />
-                        <CheckBox options={optionsProc} onChange={(op)=> alert(op)} />
-                        <CheckBox options={optionsProc} onChange={(op)=> alert(op)} />
-                        <CheckBox options={optionsProc} onChange={(op)=> alert(op)} />
-                        <CheckBox options={optionsProc} onChange={(op)=> alert(op)} />
+                       
+                        <FlatList
+                        data={data}
+                        style={styles.checkbox}
+                        keyExtractor={item => String(item.id)}
+                        renderItem={({ item }) => (
+                            <CheckBox 
+                                label={item.title}
+                                onPress={() => setChecked(!checked)}
+                                checked={checked}
+                            />
+                        )}/> 
+
+
+                        
                     </View>
                     <View>
                         <Text 
@@ -47,6 +72,7 @@ export function Procedure() {
                         Selecione a caixinha caso ja tenha feito o procediemtno para informar a clínica</Text>
                     </View>
                 </View>
+
             </View>
         </View>
     );
